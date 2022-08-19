@@ -32,6 +32,7 @@ fetch(breedUrl)
         for (element in obj.message) {
             putInUl(element);
         }
+        document.getElementById("breed-dropdown").addEventListener("onchange",selected)
     });
 
 // Challenge 4
@@ -41,7 +42,7 @@ function selected(letter) {
     const lis = ul.getElementsByTagName('li');
     for (let i = 0; i < lis.length; i++) {
         lis[i].textContent.charAt(0) === letter ?
-            lis[i].style.display = "" : 
+            lis[i].style.display = "" :
             lis[i].style.display = "none";
     }
 }
